@@ -1,34 +1,33 @@
 {
   "format": 1,
   "restore": {
-    "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/FashionEcommerce.WebAPI.csproj": {}
+    "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.WebAPI/FashionEcommerce.WebAPI.csproj": {}
   },
   "projects": {
-    "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Application/FashionEcommerce.Application.csproj": {
+    "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.Application/FashionEcommerce.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Application/FashionEcommerce.Application.csproj",
+        "projectUniqueName": "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.Application/FashionEcommerce.Application.csproj",
         "projectName": "FashionEcommerce.Application",
-        "projectPath": "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Application/FashionEcommerce.Application.csproj",
-        "packagesPath": "/Users/berkaysari/.nuget/packages/",
-        "outputPath": "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Application/obj/",
+        "projectPath": "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.Application/FashionEcommerce.Application.csproj",
+        "packagesPath": "/home/runner/.nuget/packages/",
+        "outputPath": "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/berkaysari/.nuget/NuGet/NuGet.Config"
+          "/home/runner/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Domain/FashionEcommerce.Domain.csproj": {
-                "projectPath": "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Domain/FashionEcommerce.Domain.csproj"
+              "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.Domain/FashionEcommerce.Domain.csproj": {
+                "projectPath": "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.Domain/FashionEcommerce.Domain.csproj"
               }
             }
           }
@@ -43,7 +42,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -94,27 +93,26 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Domain/FashionEcommerce.Domain.csproj": {
+    "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.Domain/FashionEcommerce.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Domain/FashionEcommerce.Domain.csproj",
+        "projectUniqueName": "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.Domain/FashionEcommerce.Domain.csproj",
         "projectName": "FashionEcommerce.Domain",
-        "projectPath": "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Domain/FashionEcommerce.Domain.csproj",
-        "packagesPath": "/Users/berkaysari/.nuget/packages/",
-        "outputPath": "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Domain/obj/",
+        "projectPath": "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.Domain/FashionEcommerce.Domain.csproj",
+        "packagesPath": "/home/runner/.nuget/packages/",
+        "outputPath": "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/berkaysari/.nuget/NuGet/NuGet.Config"
+          "/home/runner/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -133,7 +131,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -154,38 +152,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Infrastructure/FashionEcommerce.Infrastructure.csproj": {
+    "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.Infrastructure/FashionEcommerce.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Infrastructure/FashionEcommerce.Infrastructure.csproj",
+        "projectUniqueName": "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.Infrastructure/FashionEcommerce.Infrastructure.csproj",
         "projectName": "FashionEcommerce.Infrastructure",
-        "projectPath": "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Infrastructure/FashionEcommerce.Infrastructure.csproj",
-        "packagesPath": "/Users/berkaysari/.nuget/packages/",
-        "outputPath": "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Infrastructure/obj/",
+        "projectPath": "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.Infrastructure/FashionEcommerce.Infrastructure.csproj",
+        "packagesPath": "/home/runner/.nuget/packages/",
+        "outputPath": "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/berkaysari/.nuget/NuGet/NuGet.Config"
+          "/home/runner/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Application/FashionEcommerce.Application.csproj": {
-                "projectPath": "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Application/FashionEcommerce.Application.csproj"
+              "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.Application/FashionEcommerce.Application.csproj": {
+                "projectPath": "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.Application/FashionEcommerce.Application.csproj"
               },
-              "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Domain/FashionEcommerce.Domain.csproj": {
-                "projectPath": "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Domain/FashionEcommerce.Domain.csproj"
+              "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.Domain/FashionEcommerce.Domain.csproj": {
+                "projectPath": "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.Domain/FashionEcommerce.Domain.csproj"
               }
             }
           }
@@ -200,7 +197,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -249,38 +246,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/FashionEcommerce.WebAPI.csproj": {
+    "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.WebAPI/FashionEcommerce.WebAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/FashionEcommerce.WebAPI.csproj",
+        "projectUniqueName": "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.WebAPI/FashionEcommerce.WebAPI.csproj",
         "projectName": "FashionEcommerce.WebAPI",
-        "projectPath": "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/FashionEcommerce.WebAPI.csproj",
-        "packagesPath": "/Users/berkaysari/.nuget/packages/",
-        "outputPath": "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.WebAPI/obj/",
+        "projectPath": "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.WebAPI/FashionEcommerce.WebAPI.csproj",
+        "packagesPath": "/home/runner/.nuget/packages/",
+        "outputPath": "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.WebAPI/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/berkaysari/.nuget/NuGet/NuGet.Config"
+          "/home/runner/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Application/FashionEcommerce.Application.csproj": {
-                "projectPath": "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Application/FashionEcommerce.Application.csproj"
+              "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.Application/FashionEcommerce.Application.csproj": {
+                "projectPath": "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.Application/FashionEcommerce.Application.csproj"
               },
-              "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Infrastructure/FashionEcommerce.Infrastructure.csproj": {
-                "projectPath": "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Infrastructure/FashionEcommerce.Infrastructure.csproj"
+              "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.Infrastructure/FashionEcommerce.Infrastructure.csproj": {
+                "projectPath": "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.Infrastructure/FashionEcommerce.Infrastructure.csproj"
               }
             }
           }
@@ -295,7 +291,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -339,7 +335,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/9.0.300/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/10.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

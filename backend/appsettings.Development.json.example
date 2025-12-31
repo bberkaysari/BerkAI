@@ -1,0 +1,25 @@
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning",
+      "Microsoft.EntityFrameworkCore": "Information"
+    }
+  },
+  "AllowedHosts": "*",
+  "ConnectionStrings": {
+    "DefaultConnection": "Server=localhost;Database=BerkAI;Trusted_Connection=True;TrustServerCertificate=True;"
+  },
+  "JwtSettings": {
+    "SecretKey": "YOUR_SECRET_KEY_HERE_MINIMUM_32_CHARACTERS_LONG",
+    "Issuer": "BerkAI",
+    "Audience": "BerkAI-Users",
+    "ExpirationMinutes": 60
+  },
+  "GoogleAuth": {
+    "ClientId": "YOUR_GOOGLE_CLIENT_ID_HERE.apps.googleusercontent.com"
+  },
+  "Cors": {
+    "AllowedOrigins": ["http://localhost:3000", "https://localhost:3000"]
+  }
+}

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cEB5QNFKg34=",
+  "dgSpecHash": "MfgdraEjL20=",
   "success": true,
-  "projectFilePath": "/Users/berkaysari/fashion-ecommerce-backup/backend/src/FashionEcommerce.Domain/FashionEcommerce.Domain.csproj",
+  "projectFilePath": "/home/runner/work/BerkAI/BerkAI/backend/src/FashionEcommerce.Domain/FashionEcommerce.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
