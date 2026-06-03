@@ -1,5 +1,7 @@
 # Dependencies
 node_modules/
+.venv/
+**/.venv/
 .pnp
 .pnp.js
 
@@ -15,6 +17,16 @@ frontend/.vercel
 # Production
 build/
 dist/
+ai-service/outputs/
+
+# Local tooling and generated artifacts
+.dotnet/
+.logs/
+tools/runpodctl.exe
+runpod_smoke_*.png
+idm_queue_body*.json
+**/__pycache__/
+*.py[cod]
 
 # Misc
 .DS_Store

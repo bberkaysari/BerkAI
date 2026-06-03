@@ -2,11 +2,11 @@
 
 import { useState, useEffect } from 'react';
 import { useParams, useRouter, useSearchParams } from 'next/navigation';
-import { X, Heart, ChevronLeft, ChevronRight, Minus, Plus } from 'lucide-react';
+import { X, Heart, ChevronLeft, ChevronRight, Minus, Plus, Upload, Sparkles } from 'lucide-react';
 import PageLoader from '@/components/ui/PageLoader';
 import { useQuery } from '@tanstack/react-query';
 import { productsApi } from '@/lib/api/products';
-import type { Product } from '@/types/api';
+import { tryOnApi, type TryOnResponse } from '@/lib/api/tryon';
 import { useFavoritesStore } from '@/lib/stores/favoritesStore';
 import { useLocalCartStore } from '@/lib/stores/localCartStore';
 import toast from 'react-hot-toast';
@@ -30,6 +30,10 @@ export default function ProductDetailPage() {
   const [magnifierPos, setMagnifierPos] = useState({ x: 0, y: 0 });
   const [showCartDrawer, setShowCartDrawer] = useState(false);
   const [showFavoritesDrawer, setShowFavoritesDrawer] = useState(false);
+  const [tryOnPersonFile, setTryOnPersonFile] = useState<File | null>(null);
+  const [tryOnPreviewUrl, setTryOnPreviewUrl] = useState<string | null>(null);
+  const [tryOnResult, setTryOnResult] = useState<TryOnResponse | null>(null);
+  const [isTryOnLoading, setIsTryOnLoading] = useState(false);
 
   const { addFavorite, removeFavorite, isFavorite } = useFavoritesStore();
   const { addItem } = useLocalCartStore();
@@ -111,6 +115,14 @@ export default function ProductDetailPage() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isFullscreen]);
 
+  useEffect(() => {
+    return () => {
+      if (tryOnPreviewUrl) {
+        URL.revokeObjectURL(tryOnPreviewUrl);
+      }
+    };
+  }, [tryOnPreviewUrl]);
+
   const handleAddToCart = () => {
     if (!isAccessory && !selectedSize) {
       toast.error(isShoes ? 'Lütfen bir numara seçin' : 'Lütfen bir beden seçin');
@@ -177,6 +189,48 @@ export default function ProductDetailPage() {
   const displayImage = product.imageUrl || getFallbackImage();
   // Use displayImage for all product images
   const images = [displayImage, displayImage];
+
+  const handleTryOnFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (!file) return;
+
+    if (tryOnPreviewUrl) {
+      URL.revokeObjectURL(tryOnPreviewUrl);
+    }
+
+    setTryOnPersonFile(file);
+    setTryOnPreviewUrl(URL.createObjectURL(file));
+    setTryOnResult(null);
+  };
+
+  const handleRunTryOn = async () => {
+    if (!tryOnPersonFile) {
+      toast.error('Fotoğraf seçin');
+      return;
+    }
+
+    setIsTryOnLoading(true);
+    setTryOnResult(null);
+
+    try {
+      const response = await tryOnApi.run({
+        person: tryOnPersonFile,
+        garmentImageUrl: displayImage,
+        prompt: `${product.name} ${product.categoryName || ''}`.trim(),
+        steps: 12,
+        seed: 42,
+        autoCrop: true,
+      });
+
+      setTryOnResult(response);
+      toast.success('Deneme hazır');
+    } catch (error) {
+      const message = error instanceof Error ? error.message : 'Deneme oluşturulamadı';
+      toast.error(message);
+    } finally {
+      setIsTryOnLoading(false);
+    }
+  };
 
   return (
     <>
@@ -347,6 +401,71 @@ export default function ProductDetailPage() {
                       <Heart className={`w-4 h-4 ${isFavorite(product.id) ? 'fill-current' : ''}`} />
                       {isFavorite(product.id) ? 'Favorilerde' : 'Favorilere Ekle'}
                     </button>
+                  </div>
+
+                  {/* Virtual Try-On */}
+                  <div className="pt-6 border-t border-gray-200 space-y-3">
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-xs font-medium text-black uppercase tracking-wider">
+                        Üzerimde Dene
+                      </h3>
+                      {tryOnResult && (
+                        <span className="text-[11px] text-gray-500">
+                          {tryOnResult.duration_seconds.toFixed(1)} sn
+                        </span>
+                      )}
+                    </div>
+
+                    <label className="flex items-center justify-center gap-2 w-full border border-gray-300 py-3 text-sm text-black hover:border-black transition-colors cursor-pointer">
+                      <Upload className="w-4 h-4" />
+                      <span>{tryOnPersonFile ? tryOnPersonFile.name : 'Fotoğraf Seç'}</span>
+                      <input
+                        type="file"
+                        accept="image/*"
+                        className="hidden"
+                        onChange={handleTryOnFileChange}
+                      />
+                    </label>
+
+                    {tryOnPreviewUrl && (
+                      <div className="grid grid-cols-2 gap-3">
+                        <div className="aspect-[3/4] bg-gray-100 overflow-hidden">
+                          <img
+                            src={tryOnPreviewUrl}
+                            alt="Seçilen fotoğraf"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                        <div className="aspect-[3/4] bg-gray-100 overflow-hidden">
+                          <img
+                            src={displayImage}
+                            alt={product.name}
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </div>
+                    )}
+
+                    <button
+                      onClick={handleRunTryOn}
+                      disabled={isTryOnLoading || !tryOnPersonFile}
+                      className="w-full border border-black text-black py-3.5 text-sm font-medium hover:bg-black hover:text-white transition-colors uppercase tracking-wider flex items-center justify-center gap-2 disabled:border-gray-300 disabled:text-gray-400 disabled:hover:bg-white disabled:cursor-not-allowed"
+                    >
+                      <Sparkles className="w-4 h-4" />
+                      {isTryOnLoading ? 'Hazırlanıyor' : 'Dene'}
+                    </button>
+
+                    {tryOnResult && (
+                      <div className="space-y-2">
+                        <div className="aspect-[3/4] bg-gray-100 overflow-hidden">
+                          <img
+                            src={tryOnResult.result_image_url}
+                            alt="Deneme sonucu"
+                            className="w-full h-full object-cover"
+                          />
+                        </div>
+                      </div>
+                    )}
                   </div>
 
                   {/* Product Details */}
